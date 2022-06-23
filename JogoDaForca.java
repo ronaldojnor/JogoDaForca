@@ -33,7 +33,7 @@ public class JogoDaForca {
 			imprimeForca(chuteErrado);
 			if (chuteErrado >= 7) {
 				System.out.println("Voce perdeu!");
-				System.out.println("A palavra é: " + palavraSecreta);
+				System.out.println("A palavra Ã©: " + palavraSecreta);
 				break;
 			}
 			
@@ -115,7 +115,7 @@ public class JogoDaForca {
 	//ESCOLHA DO JOGADOR
 	private static boolean jogadorChute(Scanner jogador, List<Character> chute, String palavraSecreta) {
 		System.out.println("Escolha uma letra: ");	
-		String letraChute = jogador.nextLine();
+		String letraChute = jogador.nextLine().toLowerCase();
 		chute.add(letraChute.charAt(0));
 		
 	return palavraSecreta.contains(letraChute);
